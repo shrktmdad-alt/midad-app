@@ -712,7 +712,7 @@ export default function MidadApp() {
               boxShadow: '0 8px 40px rgba(74,53,37,0.3)'
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-                <h3 style={{ fontSize: 20, color: '#D4A96A', fontWeight: 700 }}>تردد لا اطلب الآن</h3>
+                <h3 style={{ fontSize: 20, color: '#D4A96A', fontWeight: 700 }}>اطلب الآن ودع أرضك تزدهر</h3>
                 <div style={{
                   background: 'linear-gradient(135deg, #606C38, #283618)',
                   borderRadius: 12, padding: '6px 14px',
@@ -976,9 +976,23 @@ export default function MidadApp() {
                 </div>
                 <p style={{ color: '#D4C9A8', fontSize: 14, lineHeight: 1.9, margin: 0 }}>
                   يرجى تحويل المبلغ الإجمالي إلى الرقم التالي:<br/>
-                  <a href="tel:+96894141966" style={{ color: '#D4A96A', fontSize: 20, fontWeight: 700, letterSpacing: 2, textDecoration: 'none' }}>
-                    +968 94141966
-                  </a><br/>
+                  <a
+  href="tel:+96892743797"
+  style={{
+    color: '#D4A96A',
+    fontSize: 20,
+    fontWeight: 700,
+    letterSpacing: 2,
+    textDecoration: 'none',
+    direction: 'ltr',
+    display: 'inline-block'
+  }}
+>
+  +968 9274 3797
+</a>
+<br/>
+                    
+                
                   <span style={{ color: 'rgba(245,242,235,0.5)', fontSize: 12 }}>
                      عبر بنك مسقط / بنك صحار الدولي / البنك الوطني العماني / بنك ظفار
                   </span>
@@ -1075,13 +1089,26 @@ export default function MidadApp() {
 
         {/* Contact info in footer */}
         <div style={{ display: 'flex', gap: 24, justifyContent: 'center', marginBottom: 20, flexWrap: 'wrap' }}>
-          <a href="https://wa.me/96894141966" target="_blank" rel="noopener noreferrer"
-            style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'rgba(245,242,235,0.5)',
-              textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
-            onMouseOver={e => e.currentTarget.style.color = '#D4A96A'}
-            onMouseOut={e => e.currentTarget.style.color = 'rgba(245,242,235,0.5)'}>
-            <Phone size={13}/> +968 94141966
-          </a>
+          <a
+  href="https://wa.me/96894141966"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: 6,
+    color: 'rgba(245,242,235,0.5)',
+    textDecoration: 'none',
+    fontSize: 13,
+    transition: 'color 0.2s',
+    direction: 'ltr',
+    unicodeBidi: 'embed'
+  }}
+  onMouseOver={e => e.currentTarget.style.color = '#D4A96A'}
+  onMouseOut={e => e.currentTarget.style.color = 'rgba(245,242,235,0.5)'}
+>
+  <Phone size={13}/> ‎+968 9414 1966
+</a>
           <a href="mailto:midadoman799@gmail.com"
             style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'rgba(245,242,235,0.5)',
               textDecoration: 'none', fontSize: 13, transition: 'color 0.2s' }}
