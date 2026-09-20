@@ -27,11 +27,18 @@ export async function saveOrder(orderData) {
 }
 
 export async function fetchOrders() {
-  const q = query(collection(db, "orders"), orderBy("createdAt", "desc"));
-  const snapshot = await getDocs(q);
-  return snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-}
+  try {
+    const snapshot = await getDocs(collection(db, "orders"));
+    
+    const orders = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
 
-export async function deleteOrder(id) {
-  await deleteDoc(doc(db, "orders", id));
+    return orders.sort((a, b) => {
+      const timeA = a.createdAt?.seconds || a.id || 0;
+      const timeB = b.createdAt?.seconds || b.id || 0;
+      return timeB - timeA;
+    });
+  } catch (error) {
+    console.error("خطأ في جلب الطلبات من Firestore:", error);
+    return [];
+  }
 }
